@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <div class="respective-links" id="upper">
+          <!--for the picture-->
+          <div class="info-container">
+            <img src="images/image-jeremy.png" alt="image not found" />
+            <p>Report for</p>
+            <h2>Jeremy Robson</h2>
+          </div>
+          <ul>
+            <li><a href="#" id="daily">Daily</a></li>
+            <li><a href="#" id="weekly">Weekly</a></li>
+            <li><a href="#" id="monthly">Monthly</a></li>
+          </ul>
+        </div>
+        <div class="activities" id="bottom">
+          <div class="work-info work-info--1 universal">
+            <img
+              class="svg-img"
+              src="./images/icon-work.svg"
+              height="50"
+              width="50"
+              z-index="0"
+            />
+            <div class="text-container">
+              <div class="top-text">
+                <p>work</p>
+                <p>...</p>
+              </div>
+              <div class="bottom-text" id="bottom-text--0">
+                <h2 class="hours-text">32hrs</h2>
+                <p class="date-text">last Week - 36hrs</p>
+              </div>
+            </div>
+          </div>
+          <div class="play-info work-info--2 universal">
+            <img
+              class="svg-img"
+              src="./images/icon-play.svg"
+              height="50"
+              width="50"
+              z-index="0"
+            />
+
+            <div class="text-container">
+              <div class="top-text">
+                <p>Play</p>
+                <p>...</p>
+              </div>
+              <div class="bottom-text" id="bottom-text--1">
+                <h2 class="hours-text">10hrs</h2>
+                <p class="date-text">last Week - 8hrs</p>
+              </div>
+            </div>
+          </div>
+          <div class="study-info work-info--3 universal">
+            <img
+              class="svg-img"
+              src="./images/icon-study.svg"
+              height="50"
+              width="50"
+              z-index="0"
+            />
+            <div class="text-container">
+              <div class="top-text">
+                <p>Study</p>
+                <p>...</p>
+              </div>
+              <div class="bottom-text" id="bottom-text--2">
+                <h2 class="hours-text">4hrs</h2>
+                <p class="date-text">last Week - 7hrs</p>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-info work-info--4 universal">
+            <img
+              class="svg-img"
+              src="./images/icon-exercise.svg"
+              height="50"
+              width="50"
+              z-index="0"
+            />
+            <div class="text-container">
+              <div class="top-text">
+                <p>Exercise</p>
+                <p>...</p>
+              </div>
+              <div class="bottom-text" id="bottom-text--3">
+                <h2 class="hours-text">4hrs</h2>
+                <p class="date-text">last Week - 9hrs</p>
+              </div>
+            </div>
+          </div>
+          <div class="social-info work-info--5 universal">
+            <img
+              class="svg-img"
+              src="./images/icon-social.svg"
+              height="50"
+              width="50"
+              z-index="0"
+            />
+            <div class="text-container">
+              <div class="top-text">
+                <p>Social</p>
+                <p>...</p>
+              </div>
+              <div class="bottom-text" id="bottom-text--4">
+                <h2 class="hours-text">5hrs</h2>
+                <p class="date-text">last Week - 10hrs</p>
+              </div>
+            </div>
+          </div>
+          <div class="self_care-info work-info--6 universal">
+            <img
+              class="svg-img"
+              src="./images/icon-self-care.svg"
+              height="50"
+              width="50"
+              z-index="0"
+            />
+            <div class="text-container">
+              <div class="top-text">
+                <p>Self Care</p>
+                <p>...</p>
+              </div>
+              <div class="bottom-text" id="bottom-text--5">
+                <h2 class="hours-text">2hrs</h2>
+                <p class="date-text">last Week - 2hrs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    </div>
+
+    <script type="text/javascript" src="data.json"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

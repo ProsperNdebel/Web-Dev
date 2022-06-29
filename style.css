@@ -1,0 +1,274 @@
+/* setting up some custom variables */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik:ital,wght@0,400;0,500;1,300&display=swap");
+:root {
+  /* colors */
+  --main-color: hsl(226, 43%, 10%);
+  --card-bcolor: hsl(235, 46%, 20%);
+  --work-color: hsl(15, 100%, 70%);
+  --play-color: hsl(195, 74%, 62%);
+  --study-color: hsl(348, 100%, 68%);
+  --exercise-color: hsl(145, 58%, 55%);
+  --social-color: hsl(264, 64%, 52%);
+  --self_care-color: hsl(43, 84%, 65%);
+  --card-color: hsl(246, 80%, 60%);
+  /* fonts */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: Rubik;
+  max-height: 100vh;
+  font-size: 1.125rem;
+}
+
+ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: hsl(236, 100%, 87%);
+}
+a:active {
+  color: hsl(236, 100%, 87%);
+}
+
+/* for centering the whole content */
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 900px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  max-width: 900px;
+  min-height: 600px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* styling the image card */
+.respective-links {
+  background-color: var(--card-bcolor);
+  border-radius: 10px;
+  height: 350;
+  max-width: 175;
+  height: 350px;
+  width: 175px;
+}
+
+.info-container {
+  background-color: var(--card-color);
+  border-radius: 10px;
+  color: #fff;
+  max-height: 250px;
+}
+
+.respective-links img {
+  border-radius: 50%;
+  height: 60px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border: 5px solid #fff;
+}
+
+.respective-links p,
+h2 {
+  margin-left: 20px;
+}
+.respective-links ul {
+  margin-left: 20px;
+}
+
+/* styling the card */
+.activities {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-height: 375px;
+  
+}
+
+.work-info {
+  /* this fixed the fact that this div was going beyond its container, for some reasons I do not know */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--work-color);
+  border-radius: 5px;
+  position: relative;
+  min-height: 60px; /*height:175px*/
+  max-width: 175px;
+}
+
+.play-info {
+  /* this fixed the fact that this div was going beyond its container, for some reasons I do not know */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--play-color);
+  border-radius: 5px;
+  position: relative;
+  max-height: 175px;
+  width: 175px;
+}
+
+.study-info {
+  /* this fixed the fact that this div was going beyond its container, for some reasons I do not know */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--study-color);
+  border-radius: 5px;
+  position: relative;
+  max-height: 175px;
+  width: 175px;
+}
+
+.exercise-info {
+  /* this fixed the fact that this div was going beyond its container, for some reasons I do not know */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--exercise-color);
+  border-radius: 5px;
+  position: relative;
+  max-height: 175px;
+  width: 175px;
+}
+
+.social-info {
+  /* this fixed the fact that this div was going beyond its container, for some reasons I do not know */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--social-color);
+  border-radius: 5px;
+  position: relative;
+  max-height: 175px;
+  width: 175px;
+}
+
+.self_care-info {
+  /* this fixed the fact that this div was going beyond its container, for some reasons I do not know */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--self_care-color);
+  border-radius: 5px;
+  position: relative;
+  max-height: 175px;
+  width: 175px;
+}
+
+.svg-img {
+  transform: translate(110px, -0px);
+  height: 40;
+}
+
+.text-container {
+  color: #fff;
+  background-color: var(--card-bcolor);
+  border-radius: 5px;
+  flex-grow: 1;
+  z-index: 2;
+}
+
+.text-container:hover {
+  background-color: hsl(235, 45%, 61%);
+}
+
+.top-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 1.125rem;
+}
+
+.bottom-text {
+  margin-top: 20px;
+  color: hsl(236, 100%, 87%);
+}
+.bottom-text p {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.bottom-text h2 {
+  margin-left: 15px;
+}
+
+.active-tab {
+  border-bottom: 2px solid grey;
+}
+
+@media only screen and (max-width: 375px) {
+  .info-container {
+    font-size: 00.75rem;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    align-items: center;
+  }
+
+  .info-container > h2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  div > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  .container {
+    display: block;
+  }
+  .respective-links {
+    height: 50px;
+    height: 150px;
+    margin-bottom: 5px;
+  }
+  .activities {
+    display: block;
+  }
+  .universal {
+    font-size: 0.75rem;
+    /* height: 100px; */
+    margin-bottom: 5px;
+  }
+  .top-text {
+    margin-top: 0px;
+  }
+  .bottom-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .svg-img {
+    height: 30px;
+    width: 30px;
+  }
+}
