@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Roboto:wght@400;700&family=Rubik:ital,wght@0,400;0,500;1,300&display=swap");
+
+:root {
+  /* theme 1 */
+  /* background colors */
+  --main-backround-1: hsl(222, 26%, 31%);
+  --toggle-or-key-background-1: hsl(223, 31%, 20%);
+  --screen-backround-1: hsl(224, 36%, 15%);
+
+  /* text display */
+  --text-display-1: #fff;
+
+  /* key background */
+
+  --reset-1: hsl(225, 21%, 49%);
+  --reset-shadow-1: hsl(224, 28%, 35%);
+  /* reset and delete */
+  --equal-1: hsl(6, 63%, 50%);
+  --equal-shadow-1: hsl(6, 70%, 34%);
+
+  --nums-syms-1: hsl(30, 25%, 89%);
+  --nums-syms-shadow-1: hsl(28, 16%, 65%);
+  /* text */
+  --dark-grayish-blue: hsl(221, 14%, 31%);
+  --text-1: #000000;
+
+  /* ball */
+  --ballbg-Color-1: hsl(6, 63%, 50%);
+
+  /* behond ball */
+  --behindballbg-color-1: hsl(223, 31%, 20%);
+
+  --desTexts-1: #fff;
+
+  /* theme 2 */
+
+  /* background colors */
+  --main-backround-2: hsl(0, 0%, 90%);
+  /* for the top right background */
+  --toggle-or-key-background-2: hsl(0, 5%, 81%);
+  --screen-backround-2: hsl(0, 0%, 93%);
+
+  /* text display */
+  --text-display-2: #000000;
+
+  /* key background */
+  /* For reset and delete */
+  --reset-2: hsl(185, 42%, 37%);
+  --reset-shadow-2: hsl(185, 58%, 25%);
+
+  /* For equal */
+  /* For the ball */
+  --equal-2: hsl(25, 98%, 40%);
+  --equal-shadow-2: hsl(25, 99%, 27%);
+
+  /* For all other buttons */
+  --nums-syms-2: hsl(45, 7%, 89%);
+  --nums-syms-shadow-2: hsl(35, 11%, 61%);
+
+  /* text */
+  /* For numbers and majority text */
+  --text-2: #000;
+  --text-2a: hsl(60, 10%, 19%);
+  --text-2b: #fff;
+
+  /* ball */
+  --ballbg-Color-2: hsl(25, 98%, 40%);
+
+  /* behind ball */
+  --behindballbg-color-2: hsl(0, 5%, 81%);
+
+  --desTexts-2: #000000;
+
+  /* theme 3 */
+  --main-backround-3: hsl(268, 75%, 9%);
+  --toggle-or-key-background-3: hsl(268, 71%, 12%);
+  --screen-backround-3: hsl(268, 71%, 12%);
+
+  /* text display */
+  --text-display-3: hsl(52, 100%, 62%);
+
+  /* key background */
+  --reset-3: hsl(281, 89%, 26%);
+  --reset-shadow-3: hsl(285, 91%, 52%);
+
+  --equal-3: hsl(176, 100%, 44%);
+  --equal-shadow-3: hsl(177, 92%, 70%);
+
+  --nums-syms-3: hsl(268, 47%, 21%);
+  --nums-syms-shadow-3: hsl(290, 70%, 36%);
+
+  /* text */
+  --text-3: hsl(52, 100%, 62%);
+  --text-2b: hsl(198, 20%, 13%);
+
+  /* ball */
+  --ballbg-Color-3: hsl(176, 100%, 44%);
+  /* behind ball */
+  --behindballbg-color-3: hsl(268, 71%, 12%);
+
+  --desTexts-3: hsl(52, 100%, 62%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--main-backround-1);
+  font-family: "League Spartan", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-size: 32px;
+}
+
+/* styling the top part */
+.main-container {
+  width: 400px;
+  margin: 25vh auto;
+}
+
+.top-part {
+  display: flex;
+  justify-content: space-between;
+  /* give this margins later so that there is space at the ends */
+  color: var(--White);
+}
+
+.far-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  /* align-self: flex-end; */
+}
+
+.theme-selector {
+  font-size: 10px;
+  font-weight: 700;
+  width: 40px;
+}
+
+.theme-selector span {
+  margin-right: 10px;
+}
+
+.theme-selector span:nth-child(3) {
+  margin-right: 0;
+}
+
+.contain-ball {
+  background-color: var(--screen-backround-1);
+  height: 15px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.ball {
+  background-color: red;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  top: 1.5px;
+  left: 1px;
+}
+
+.far-left {
+  color: #fff;
+  font-weight: 700px;
+  font-size: 25px;
+}
+
+.theme {
+  margin-right: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+/* animation for moving the ball within its container */
+@keyframes Movefoward-to-middle {
+  0% {
+    left: 1.5px;
+  }
+  100% {
+    left: 14px;
+  }
+}
+
+@keyframes movefowardto-end {
+  0% {
+    left: 14px;
+  }
+  100% {
+    left: 26.5px;
+  }
+}
+
+/* styling the the part where I display the input to the calculator */
+.text-display {
+  height: 60px;
+  width: 100%;
+  text-align: right;
+  justify-content: center;
+  /* specify the background color */
+  font-size: 30px;
+  font-weight: bold;
+  background-color: var(--screen-backround-1);
+  border-radius: 5px;
+  margin: 10px 0;
+  line-height: 60px;
+  margin-right: 20px;
+  color: #fff;
+  padding-right: 15px;
+}
+.text-display span {
+  /* color: black; */
+  /* fix the text overflowing */
+  word-wrap: normal;
+  word-break: normal;
+}
+
+/* styling the buttons section */
+.nums-and-symbols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  background-color: var(--toggle-or-key-background-1);
+  border-radius: 5px;
+  height: 300px;
+  /* gap: 5px; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+/* styling the buttons */
+.number {
+  /* centers text horizontally */
+  text-align: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  height: 40px;
+  width: 70px;
+  /* centers text vertically */
+  line-height: 40px;
+  border-radius: 5px;
+  background-color: var(--nums-syms-1);
+  box-shadow: 0 3px 0 0 var(--nums-syms-shadow-1);
+  align-self: center;
+  justify-self: center;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.unique:active {
+  height: 38px;
+  width: 68px;
+}
+
+/* this is to affect only small buttons */
+.unique {
+  max-width: 70px;
+}
+
+/* making the bigger buttons to span 2 columns */
+.reset {
+  grid-column: 1 / span 2;
+  background-color: var(--reset-1);
+  box-shadow: 0 3px 0 0 var(--reset-shadow-1);
+  width: 175px;
+  max-width: 175px;
+  color: #fff;
+}
+.equal {
+  grid-column: 3 / span 2;
+  background-color: var(--eqaul-1);
+  box-shadow: 0 3px 0 0 var(--equal-shadow-1);
+  width: 175px;
+  max-width: 175px;
+  color: #fff;
+}
+
+.diff:active {
+  width: 170px;
+  height: 38px;
+}
+
+.equal:active {
+  width: 170px;
+  height: 38px;
+}
+
+.delete {
+  background-color: var(--reset-1);
+  box-shadow: 0 3px 0 0 var(--reset-shadow-1);
+  color: #fff;
+}

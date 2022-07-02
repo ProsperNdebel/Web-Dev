@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="top-part">
+        <p class="far-left color-change">Calc</p>
+        <div class="far-right">
+          <span class="theme color-change">THEME</span>
+          <div class="theme-selector">
+            <div class="theme-number color-change">
+              <span>1</span><span>2</span><span>3</span>
+            </div>
+            <div class="contain-ball">
+              <div class="ball"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-display"><span class="inner-text"></span></div>
+      <!--this will be dynamically filled with press results or amth operations-->
+      <div class="nums-and-symbols">
+        <div class="number unique val">7</div>
+        <div class="number unique val">8</div>
+        <div class="number unique val">9</div>
+        <div class="number unique delete diff">DEL</div>
+        <div class="number unique val">4</div>
+        <div class="number unique val">5</div>
+        <div class="number unique val">6</div>
+        <div class="number unique val">+</div>
+        <div class="number unique val">1</div>
+        <div class="number unique val">2</div>
+        <div class="number unique val">3</div>
+        <div class="number unique val">.</div>
+        <div class="number unique val">0</div>
+        <div class="number unique val">/</div>
+        <div class="number unique val">-</div>
+        <div class="number unique val">*</div>
+        <div class="number reset diff">RESET</div>
+        <div class="number equal">=</div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Prosper Ndebele</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
